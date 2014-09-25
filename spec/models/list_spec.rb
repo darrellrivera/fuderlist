@@ -15,4 +15,9 @@ RSpec.describe List, :type => :model do
     same_name = List.new(:name => name)
     expect(same_name.valid?).to eq(false)
   end
+
+  it "has many items" do
+    list = List.create!(:name => "a name")
+    expect(list.items).to eq([])
+  end
 end
