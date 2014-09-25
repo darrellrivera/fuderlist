@@ -1,0 +1,1 @@
+server: rails s -p 2000
